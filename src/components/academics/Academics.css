@@ -1,0 +1,9 @@
+.academics-header {
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.academics-background {
+    background-color: #282c34;
+    min-height: 100vh;
+}
