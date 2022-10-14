@@ -10,6 +10,8 @@ import {
   } from "react-router-dom";
 import Home from '../home/Home'
 import Academics from '../academics/Academics'
+import Admission from '../admission/Admission';
+
 function NavigationBar() {
     return (
         <>
@@ -29,7 +31,7 @@ function NavigationBar() {
                 </Route>
                 <Route path="/academics" element={<Academics/>}>
                 </Route>
-                <Route path="/admission" element={<Academics/>}>
+                <Route path="/admission" element={<Admission/>}>
                 </Route>
             </Routes>
         </Router>

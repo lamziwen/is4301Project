@@ -1,0 +1,16 @@
+.admission-centerContent {
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.admission-center{
+    color: white;
+}
+.admission-background {
+    background-color: #282c34;
+    min-height: 100vh;
+}
+ol {
+    display: table;
+    margin: 0 auto;
+}
