@@ -44,22 +44,36 @@ function NavigationBar() {
     function showModal(event){
         console.log(event.currentTarget.id)
         
-        if (event.currentTarget.id == "loginButton"){
+        if (event.currentTarget.id === "loginButton"){
             setShow(true)
-        } else if (event.currentTarget.id == "registerButton") {
+            setShow2(false)
+        } else if (event.currentTarget.id === "registerButton") {
             setShow2(true)
+            setShow(false)
         }
+        
+    }
+
+    function signOut(event) {
+        setShow2(false)
+        setShow(false)
+        logout()
     }
 
     useEffect(() => {
         if (loading) {
             // maybe trigger a loading screen
-            console.log(user)
             return;
         }
         if (user) {
             navigate("/");
-            fetchUserName();
+            if (user.displayName !== null) {
+                setName(user.displayName);
+            } else {
+                fetchUserName()
+            }
+            
+            
         }
     }, [user, loading]);
     return (
@@ -89,10 +103,10 @@ function NavigationBar() {
                             </div>
                         ) : (
                             <div>
-                                Welcome {user.displayName}
+                                Welcome {name}
                                 &nbsp;
                                 &nbsp;
-                                <button onClick={logout}>
+                                <button onClick={signOut}>
                                     Logout
                                 </button>
                             </div>

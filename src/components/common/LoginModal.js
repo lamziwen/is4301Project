@@ -6,19 +6,38 @@ import {
 } from "react-router-dom";
 import { auth, logInWithEmailAndPassword, signInWithGoogle, db } from "../navbar/service/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import Toast from 'react-bootstrap/Toast';
 import './LoginModal.css';
 import Modal from 'react-bootstrap/Modal';
 
+function ToastMessageNotification({show,setShow, message}) {
+    return (
+      <Toast show={show} delay={3000} autohide onClose={() => setShow(false)}>
+        <Toast.Body>{message}</Toast.Body>
+      </Toast>
+    );
+  }
+
+
 function LoginModal({show,setShow}) {
+    const [toastShow, setToastShow] = useState(false);
+    const [toastMessage, setToastMessage] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate();
-    console.log(show)
+
+    function triggerLogin() {
+        logInWithEmailAndPassword(email, password).then((resp) => {
+            setToastShow(true)
+            setToastMessage(resp) 
+            // setTimeout(()=>{
+            //     setToastShow(false)
+            // }, 5000)
+        })
+    }
     useEffect(() => {
         if (loading) {
-            console.log(user)
             return;
         }
         if (user) {
@@ -27,7 +46,6 @@ function LoginModal({show,setShow}) {
     }, [user, loading]);
     return (
         <>
-
             <Modal show={show} onHide={setShow}>
                 <Modal.Header closeButton>
                     <Modal.Title>Login</Modal.Title>
@@ -49,11 +67,12 @@ function LoginModal({show,setShow}) {
                             placeholder="Password"
                         />
                     </div>
+                    <ToastMessageNotification show={toastShow} setShow={(bool) => setToastShow(bool)} message = {toastMessage}/>
                 </Modal.Body>
                 <Modal.Footer>
                     <button
                         className="login__btn"
-                        onClick={() => logInWithEmailAndPassword(email, password)}
+                        onClick={triggerLogin}
                     >
                         Login
                     </button>
@@ -62,6 +81,7 @@ function LoginModal({show,setShow}) {
                     </button>
                 </Modal.Footer>
             </Modal>
+           
         </>
     );
 }

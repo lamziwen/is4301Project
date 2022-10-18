@@ -10,14 +10,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import './LoginModal.css';
 import Modal from 'react-bootstrap/Modal';
-
 function RegisterModal({ show, setShow2 }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [user, loading, error] = useAuthState(auth);
     const [name, setName] = useState("");
     const navigate = useNavigate();
-    console.log(show)
     const register = () => {
         if (!name) alert("Please enter name");
         registerWithEmailAndPassword(name, email, password);

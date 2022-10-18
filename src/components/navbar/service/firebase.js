@@ -18,12 +18,12 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCY2kyS7hxQXIhE6uNo_zlfXUUeEhFvEQs",
-  authDomain: "is4301project.firebaseapp.com",
-  projectId: "is4301project",
-  storageBucket: "is4301project.appspot.com",
-  messagingSenderId: "574745710205",
-  appId: "1:574745710205:web:acb1dcc8604fb005e2eb14"
+  apiKey: "AIzaSyASaAd3ksjs0kX4U2YGwCG0F5NuIP1_41U",
+  authDomain: "is4301project-67245.firebaseapp.com",
+  projectId: "is4301project-67245",
+  storageBucket: "is4301project-67245.appspot.com",
+  messagingSenderId: "118570780505",
+  appId: "1:118570780505:web:71fbfa197a517c69e2ae48"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -40,6 +40,7 @@ const signInWithGoogle = async () => {
     const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
+      console.log("signInWithGoogle")
       await addDoc(collection(db, "users"), {
         uid: user.uid,
         name: user.displayName,
@@ -58,8 +59,15 @@ const logInWithEmailAndPassword = async (email, password) => {
     await signInWithEmailAndPassword(auth, email, password);
   } catch (err) {
     console.error(err);
-    alert("Invalid username or password");
-
+    var stringValue = JSON.stringify(err)
+    var stringJson = JSON.parse(stringValue)
+    if (stringJson.code === "auth/user-not-found"){
+      return "Account does not exist. Please register a account"
+    } else if (stringJson.code === "auth/wrong-password"){
+      return "Invalid Password. Please reset your password if you forget."
+    } else if (stringJson.code === "auth/invalid-email") {
+      return "Invalid Email. Please double check."
+    }
   }
 };
 
