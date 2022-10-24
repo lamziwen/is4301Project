@@ -62,7 +62,7 @@ const logInWithEmailAndPassword = async (email, password) => {
     var stringValue = JSON.stringify(err)
     var stringJson = JSON.parse(stringValue)
     if (stringJson.code === "auth/user-not-found"){
-      return "Account does not exist. Please register a account"
+      return "Account does not exist. Please register an account"
     } else if (stringJson.code === "auth/wrong-password"){
       return "Invalid Password. Please reset your password if you forget."
     } else if (stringJson.code === "auth/invalid-email") {
