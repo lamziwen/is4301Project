@@ -1,0 +1,1569 @@
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 53eba88..34f4a96 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -1421,6 +1421,669 @@[m
+         }[m
+       }[m
+     },[m
+[32m+[m[32m    "@firebase/analytics": {[m
+[32m+[m[32m      "version": "0.8.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/analytics/-/analytics-0.8.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-viGhc57JW9zHp/0JKpLBUthdpOrEjbPETQFz8oNfaNma+cHA6FtIrtg4Sla52DgqatbATcE9aIDBiPCGrCtNjw==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/installations": "0.5.15",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/analytics-compat": {[m
+[32m+[m[32m      "version": "0.1.16",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/analytics-compat/-/analytics-compat-0.1.16.tgz",[m
+[32m+[m[32m      "integrity": "sha512-mDAhE33WiyCrqSQZvzyZtQCCdf4ipn5tsEpTbIUruk7MbThQ1EbNAbPBiEk9NDLD3sUyLABZGFctvym/hc8H+w==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/analytics": "0.8.3",[m
+[32m+[m[32m        "@firebase/analytics-types": "0.7.0",[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/analytics-types": {[m
+[32m+[m[32m      "version": "0.7.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/analytics-types/-/analytics-types-0.7.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-DNE2Waiwy5+zZnCfintkDtBfaW6MjIG883474v6Z0K1XZIvl76cLND4iv0YUb48leyF+PJK1KO2XrgHb/KpmhQ=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/app": {[m
+[32m+[m[32m      "version": "0.8.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/app/-/app-0.8.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ByNDCe8h9O/szO3XVTrS484MtqBOKriVaNCQC7Y7KgZSaiA0OOWmIY5vwi63mBTYetqMNN5VGiG/6ZSmGIZyoQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "idb": "7.0.1",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "idb": {[m
+[32m+[m[32m          "version": "7.0.1",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/idb/-/idb-7.0.1.tgz",[m
+[32m+[m[32m          "integrity": "sha512-UUxlE7vGWK5RfB/fDwEGgRf84DY/ieqNha6msMV99UsEMQhJ1RwbCd8AYBj3QMgnE3VZnfQvm4oKVCJTYlqIgg=="[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/app-check": {[m
+[32m+[m[32m      "version": "0.5.15",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/app-check/-/app-check-0.5.15.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ifQalGXkXMwGR3F8Glmo1XtDg0UjkwCmI/ff05mxnKGMfs5ZDyw8DikQfna//a/KdYuOBqxlBwS2BhHiobqUUg==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/app-check-compat": {[m
+[32m+[m[32m      "version": "0.2.15",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/app-check-compat/-/app-check-compat-0.2.15.tgz",[m
+[32m+[m[32m      "integrity": "sha512-EgD1WEFwwq7aP7DxPSYuUpMt8eAhClA57976D3BaHDbH/IXEuw0DfaeT0LtBb+xJD7J8uxy+YKpudCC8gzUu8g==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/app-check": "0.5.15",[m
+[32m+[m[32m        "@firebase/app-check-types": "0.4.0",[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/app-check-interop-types": {[m
+[32m+[m[32m      "version": "0.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/app-check-interop-types/-/app-check-interop-types-0.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-uZfn9s4uuRsaX5Lwx+gFP3B6YsyOKUE+Rqa6z9ojT4VSRAsZFko9FRn6OxQUA1z5t5d08fY4pf+/+Dkd5wbdbA=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/app-check-types": {[m
+[32m+[m[32m      "version": "0.4.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/app-check-types/-/app-check-types-0.4.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-SsWafqMABIOu7zLgWbmwvHGOeQQVQlwm42kwwubsmfLmL4Sf5uGpBfDhQ0CAkpi7bkJ/NwNFKafNDL9prRNP0Q=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/app-compat": {[m
+[32m+[m[32m      "version": "0.1.37",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/app-compat/-/app-compat-0.1.37.tgz",[m
+[32m+[m[32m      "integrity": "sha512-doTKYGlVc8ZiQNOl66rpkU/YItRyOxCgMp4YWThXkPM4T/pTi4a9IMCe8K88gVNeYWd8sKW4vSnxjcOG5hQXEA==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/app": "0.8.2",[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/app-types": {[m
+[32m+[m[32m      "version": "0.8.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/app-types/-/app-types-0.8.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Lec3VVquUwXPn2UReGSsfTxuMBVRmzGIwA/CJnF0LQuPgv9kOmXk9mVqsDMfHxHtqjai0n6wWHR2TqjdVV/bYA=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/auth": {[m
+[32m+[m[32m      "version": "0.20.10",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/auth/-/auth-0.20.10.tgz",[m
+[32m+[m[32m      "integrity": "sha512-uAZypmVv/4nijaPVtR/ipjKBmSDPLQ7sNScLHs2DVhdvCklgUUF5+zsEdPlMfKDIfmVQHFwHbUgeKyXDYSRMwQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "node-fetch": "2.6.7",[m
+[32m+[m[32m        "selenium-webdriver": "4.1.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/auth-compat": {[m
+[32m+[m[32m      "version": "0.2.23",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/auth-compat/-/auth-compat-0.2.23.tgz",[m
+[32m+[m[32m      "integrity": "sha512-r9YEXaL7YKoFOWHRvVoQ6d5klP+hkSsAtt21UIvP3/BxDDU+yLXN5vVvFHr38apuUeMGN34M7zkY6SihnLutIQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/auth": "0.20.10",[m
+[32m+[m[32m        "@firebase/auth-types": "0.11.0",[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "node-fetch": "2.6.7",[m
+[32m+[m[32m        "selenium-webdriver": "4.1.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/auth-interop-types": {[m
+[32m+[m[32m      "version": "0.1.6",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/auth-interop-types/-/auth-interop-types-0.1.6.tgz",[m
+[32m+[m[32m      "integrity": "sha512-etIi92fW3CctsmR9e3sYM3Uqnoq861M0Id9mdOPF6PWIg38BXL5k4upCNBggGUpLIS0H1grMOvy/wn1xymwe2g=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/auth-types": {[m
+[32m+[m[32m      "version": "0.11.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/auth-types/-/auth-types-0.11.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-q7Bt6cx+ySj9elQHTsKulwk3+qDezhzRBFC9zlQ1BjgMueUOnGMcvqmU0zuKlQ4RhLSH7MNAdBV2znVaoN3Vxw=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/component": {[m
+[32m+[m[32m      "version": "0.5.20",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/component/-/component-0.5.20.tgz",[m
+[32m+[m[32m      "integrity": "sha512-wP51tQBlPFprfAWxWjzC/56hG4APhl43jFsgwuqCl3bhVbiKcr278QbrbGNmIXDeGKo4sGZLAnH9whl2apeCmA==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/database": {[m
+[32m+[m[32m      "version": "0.13.9",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/database/-/database-0.13.9.tgz",[m
+[32m+[m[32m      "integrity": "sha512-raQEBgQQybaEoMloJL8wWHQywGQ9mF2VbitvHydsbSNn+KL/xRDjXeQZPuuSbRjkYV6mR8jvQB7gpnzQQNE8Qg==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/auth-interop-types": "0.1.6",[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "faye-websocket": "0.11.4",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/database-compat": {[m
+[32m+[m[32m      "version": "0.2.9",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/database-compat/-/database-compat-0.2.9.tgz",[m
+[32m+[m[32m      "integrity": "sha512-zzyFM3+jW/qYtHojiQirHXGXYyElbqVngEEn/i2gXoSzcK0Y2AL5oHAqGYXLaaW0+t4Zwnssh3HnQJM8C1D0fw==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/database": "0.13.9",[m
+[32m+[m[32m        "@firebase/database-types": "0.9.16",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/database-types": {[m
+[32m+[m[32m      "version": "0.9.16",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/database-types/-/database-types-0.9.16.tgz",[m
+[32m+[m[32m      "integrity": "sha512-dK/uFgHisrVijSoHf9RLJ7NwvlOul2rO/z9ufOSbGd8/TqFVASXz+19mynhDIoSEnyQtJC/NTyBzSPfjz0w61w==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/app-types": "0.8.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/firestore": {[m
+[32m+[m[32m      "version": "3.7.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/firestore/-/firestore-3.7.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-sDZ79cUf4cwCyRzN74zODgaeUvyt0lGA8YwaasVVqojgznwMG/bIz+/Tny4ZEnLZFrlniCqt2tStWsiC6s3u7g==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "@firebase/webchannel-wrapper": "0.8.0",[m
+[32m+[m[32m        "@grpc/grpc-js": "^1.3.2",[m
+[32m+[m[32m        "@grpc/proto-loader": "^0.6.13",[m
+[32m+[m[32m        "node-fetch": "2.6.7",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/firestore-compat": {[m
+[32m+[m[32m      "version": "0.2.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/firestore-compat/-/firestore-compat-0.2.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-XiiTpmUfyZ6QU3Dw9BCT4T+KPvqzada1GsUNX49HmriWHpIn3jTAjsagkigRAnmNDlxS3ki6Yzg9Cs60tpD0tw==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/firestore": "3.7.1",[m
+[32m+[m[32m        "@firebase/firestore-types": "2.5.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/firestore-types": {[m
+[32m+[m[32m      "version": "2.5.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/firestore-types/-/firestore-types-2.5.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-I6c2m1zUhZ5SH0cWPmINabDyH5w0PPFHk2UHsjBpKdZllzJZ2TwTkXbDtpHUZNmnc/zAa0WNMNMvcvbb/xJLKA=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/functions": {[m
+[32m+[m[32m      "version": "0.8.7",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/functions/-/functions-0.8.7.tgz",[m
+[32m+[m[32m      "integrity": "sha512-JHSKdAOzlFJ9NdKoOaq4x6S1q6B3GmYZDg13KIDsE6BC0E9o/eWxOWOjSFJRCP/lpfFwa0rYBRayfUvZxW3BLw==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/app-check-interop-types": "0.1.0",[m
+[32m+[m[32m        "@firebase/auth-interop-types": "0.1.6",[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/messaging-interop-types": "0.1.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "node-fetch": "2.6.7",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/functions-compat": {[m
+[32m+[m[32m      "version": "0.2.7",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/functions-compat/-/functions-compat-0.2.7.tgz",[m
+[32m+[m[32m      "integrity": "sha512-bcUst8ZDJHeVy2Wox4KEM5EizsrrqLzbwFIwJD7KkuSYP8XrlV2gaqJnCvIXXc0Nc4JRGvbXcvFFMXDjhsEp4Q==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/functions": "0.8.7",[m
+[32m+[m[32m        "@firebase/functions-types": "0.5.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/functions-types": {[m
+[32m+[m[32m      "version": "0.5.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/functions-types/-/functions-types-0.5.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-qza0M5EwX+Ocrl1cYI14zoipUX4gI/Shwqv0C1nB864INAD42Dgv4v94BCyxGHBg2kzlWy8PNafdP7zPO8aJQA=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/installations": {[m
+[32m+[m[32m      "version": "0.5.15",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/installations/-/installations-0.5.15.tgz",[m
+[32m+[m[32m      "integrity": "sha512-RVm2nc2d+bEDFzFzQDTTU1Z13fjAD0v88yDLjtRZuT2R7JwvAegQ4F7CupBvnnf7nftkd3kBwdOi8MhMthb3jQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "idb": "7.0.1",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "idb": {[m
+[32m+[m[32m          "version": "7.0.1",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/idb/-/idb-7.0.1.tgz",[m
+[32m+[m[32m          "integrity": "sha512-UUxlE7vGWK5RfB/fDwEGgRf84DY/ieqNha6msMV99UsEMQhJ1RwbCd8AYBj3QMgnE3VZnfQvm4oKVCJTYlqIgg=="[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/installations-compat": {[m
+[32m+[m[32m      "version": "0.1.15",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/installations-compat/-/installations-compat-0.1.15.tgz",[m
+[32m+[m[32m      "integrity": "sha512-m0atyudsVj6ekmM+djhhzzInMC3Y233YJky9vXUVt5MHQY0mHhqDds9+UIrCa6cpbl+ntI2fOuoYV7y01s3sfw==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/installations": "0.5.15",[m
+[32m+[m[32m        "@firebase/installations-types": "0.4.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/installations-types": {[m
+[32m+[m[32m      "version": "0.4.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/installations-types/-/installations-types-0.4.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-nXxWKQDvBGctuvsizbUEJKfxXU9WAaDhon+j0jpjIfOJkvkj3YHqlLB/HeYjpUn85Pb22BjplpTnDn4Gm9pc3A=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/logger": {[m
+[32m+[m[32m      "version": "0.3.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/logger/-/logger-0.3.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-POTJl07jOKTOevLXrTvJD/VZ0M6PnJXflbAh5J9VGkmtXPXNG6MdZ9fmRgqYhXKTaDId6AQenQ262uwgpdtO0Q==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/messaging": {[m
+[32m+[m[32m      "version": "0.9.19",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/messaging/-/messaging-0.9.19.tgz",[m
+[32m+[m[32m      "integrity": "sha512-xu99y/7/P+y3txGtgjsVJZyvx7T5/KdvFgDWS7oZwhKYG0o+DXFvvw3SBMK82LFGFOoyHlJUPqv45EyCPnOPCA==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/installations": "0.5.15",[m
+[32m+[m[32m        "@firebase/messaging-interop-types": "0.1.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "idb": "7.0.1",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "idb": {[m
+[32m+[m[32m          "version": "7.0.1",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/idb/-/idb-7.0.1.tgz",[m
+[32m+[m[32m          "integrity": "sha512-UUxlE7vGWK5RfB/fDwEGgRf84DY/ieqNha6msMV99UsEMQhJ1RwbCd8AYBj3QMgnE3VZnfQvm4oKVCJTYlqIgg=="[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/messaging-compat": {[m
+[32m+[m[32m      "version": "0.1.19",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/messaging-compat/-/messaging-compat-0.1.19.tgz",[m
+[32m+[m[32m      "integrity": "sha512-h5tx4nxfSILeRquk5mKE8Onu7WtL6b7rfB6GKNJKecvkPs3nnq5Z4cp2Av4JUR2Wtt9UxCTfO0iRbbmtrt2bZQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/messaging": "0.9.19",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/messaging-interop-types": {[m
+[32m+[m[32m      "version": "0.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/messaging-interop-types/-/messaging-interop-types-0.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-DbvUl/rXAZpQeKBnwz0NYY5OCqr2nFA0Bj28Fmr3NXGqR4PAkfTOHuQlVtLO1Nudo3q0HxAYLa68ZDAcuv2uKQ=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/performance": {[m
+[32m+[m[32m      "version": "0.5.15",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/performance/-/performance-0.5.15.tgz",[m
+[32m+[m[32m      "integrity": "sha512-YnnkUehXXzqQefNE5PlPEsXeJYSeY7cMWEdHYTj6u0/F5ntLSAhVZC8jl3Y0fTU1W8a9USQhml6NaXyWiVGmjQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/installations": "0.5.15",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/performance-compat": {[m
+[32m+[m[32m      "version": "0.1.15",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/performance-compat/-/performance-compat-0.1.15.tgz",[m
+[32m+[m[32m      "integrity": "sha512-mryHr5eBEpWxBo8b3KM/53SwwVjMVahwdEnhfx1r+zAvmEPEzXUOGBzAC1l5WQ4DrwtDR87uMZ5soiQ/0jl9QQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/performance": "0.5.15",[m
+[32m+[m[32m        "@firebase/performance-types": "0.1.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/performance-types": {[m
+[32m+[m[32m      "version": "0.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/performance-types/-/performance-types-0.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-6p1HxrH0mpx+622Ql6fcxFxfkYSBpE3LSuwM7iTtYU2nw91Hj6THC8Bc8z4nboIq7WvgsT/kOTYVVZzCSlXl8w=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/remote-config": {[m
+[32m+[m[32m      "version": "0.3.14",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/remote-config/-/remote-config-0.3.14.tgz",[m
+[32m+[m[32m      "integrity": "sha512-wEOz3Tasxhr5lCGioe0WNZwDOoQhNZK2qGAm5+AlHAPaAhWIWvqUTkKsk3nFRztyRZzj3r9k5Gc2OSpEcQKP1A==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/installations": "0.5.15",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/remote-config-compat": {[m
+[32m+[m[32m      "version": "0.1.15",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/remote-config-compat/-/remote-config-compat-0.1.15.tgz",[m
+[32m+[m[32m      "integrity": "sha512-jGUrZXIxQRMeSrqEaCi3MtMF33NN12TNTQDZlbex2+T2+yTMI/sn3Mq52T/OccCo86DK17WVlXSWQCH1zCD13g==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/logger": "0.3.3",[m
+[32m+[m[32m        "@firebase/remote-config": "0.3.14",[m
+[32m+[m[32m        "@firebase/remote-config-types": "0.2.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/remote-config-types": {[m
+[32m+[m[32m      "version": "0.2.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/remote-config-types/-/remote-config-types-0.2.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-hqK5sCPeZvcHQ1D6VjJZdW6EexLTXNMJfPdTwbD8NrXUw6UjWC4KWhLK/TSlL0QPsQtcKRkaaoP+9QCgKfMFPw=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/storage": {[m
+[32m+[m[32m      "version": "0.9.12",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/storage/-/storage-0.9.12.tgz",[m
+[32m+[m[32m      "integrity": "sha512-XIAmje0ufvRrxrUU/9tvGCuUIy7WSJf3XM8Y8OV9EW2Dg1w4f8IpraLiUdlirdtFM0UAnO2kDQHoiVQYhRrADQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "node-fetch": "2.6.7",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/storage-compat": {[m
+[32m+[m[32m      "version": "0.1.20",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/storage-compat/-/storage-compat-0.1.20.tgz",[m
+[32m+[m[32m      "integrity": "sha512-8vruwltKdvEPhYbPXA/otb5fAD7MGsBHpCzktJWvF7eIALa4sUlYt+jJxG5Nwk2FoT1NrwLQ7TtI7zvm6/NinA==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/component": "0.5.20",[m
+[32m+[m[32m        "@firebase/storage": "0.9.12",[m
+[32m+[m[32m        "@firebase/storage-types": "0.6.0",[m
+[32m+[m[32m        "@firebase/util": "1.7.2",[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/storage-types": {[m
+[32m+[m[32m      "version": "0.6.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/storage-types/-/storage-types-0.6.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-1LpWhcCb1ftpkP/akhzjzeFxgVefs6eMD2QeKiJJUGH1qOiows2w5o0sKCUSQrvrRQS1lz3SFGvNR1Ck/gqxeA=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/util": {[m
+[32m+[m[32m      "version": "1.7.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/util/-/util-1.7.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-P3aTihYEMoz2QQlcn0T7av7HLEK9gsTc1ZiN9VA8wnUtEJscUNemCmTmP3RRysqEb3Z+tVVoycztY8f6R36rRw==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "tslib": "^2.1.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tslib": {[m
+[32m+[m[32m          "version": "2.4.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@firebase/webchannel-wrapper": {[m
+[32m+[m[32m      "version": "0.8.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.8.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Q8erQds5LuAUgNuFOt/tu/abffYUHYxN+Ogp2V5EOssfFG7Ja4ce324Sqyq41u/vB5CSr+tfYS3JzTDrDxCvdw=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@grpc/grpc-js": {[m
+[32m+[m[32m      "version": "1.7.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@grpc/grpc-js/-/grpc-js-1.7.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-MqqbVynbe3VUSnApFW/dpkDaa9T1ASqRnMWeSPGFO/Ro98R7XUDLacfeBa7RaSI1iFu9GYk5gBKARf0zipFe4w==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@grpc/proto-loader": "^0.7.0",[m
+[32m+[m[32m        "@types/node": ">=12.12.47"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@grpc/proto-loader": {[m
+[32m+[m[32m          "version": "0.7.3",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/@grpc/proto-loader/-/proto-loader-0.7.3.tgz",[m
+[32m+[m[32m          "integrity": "sha512-5dAvoZwna2Py3Ef96Ux9jIkp3iZ62TUsV00p3wVBPNX5K178UbNi8Q7gQVqwXT1Yq9RejIGG9G2IPEo93T6RcA==",[m
+[32m+[m[32m          "requires": {[m
+[32m+[m[32m            "@types/long": "^4.0.1",[m
+[32m+[m[32m            "lodash.camelcase": "^4.3.0",[m
+[32m+[m[32m            "long": "^4.0.0",[m
+[32m+[m[32m            "protobufjs": "^7.0.0",[m
+[32m+[m[32m            "yargs": "^16.2.0"[m
+[32m+[m[32m          }[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@grpc/proto-loader": {[m
+[32m+[m[32m      "version": "0.6.13",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@grpc/proto-loader/-/proto-loader-0.6.13.tgz",[m
+[32m+[m[32m      "integrity": "sha512-FjxPYDRTn6Ec3V0arm1FtSpmP6V50wuph2yILpyvTKzjc76oDdoihXqM1DzOW5ubvCC8GivfCnNtfaRE8myJ7g==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@types/long": "^4.0.1",[m
+[32m+[m[32m        "lodash.camelcase": "^4.3.0",[m
+[32m+[m[32m        "long": "^4.0.0",[m
+[32m+[m[32m        "protobufjs": "^6.11.3",[m
+[32m+[m[32m        "yargs": "^16.2.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "protobufjs": {[m
+[32m+[m[32m          "version": "6.11.3",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/protobufjs/-/protobufjs-6.11.3.tgz",[m
+[32m+[m[32m          "integrity": "sha512-xL96WDdCZYdU7Slin569tFX712BxsxslWwAfAhCYjQKGTq7dAU91Lomy6nLLhh/dyGhk/YH4TwTSRxTzhuHyZg==",[m
+[32m+[m[32m          "requires": {[m
+[32m+[m[32m            "@protobufjs/aspromise": "^1.1.2",[m
+[32m+[m[32m            "@protobufjs/base64": "^1.1.2",[m
+[32m+[m[32m            "@protobufjs/codegen": "^2.0.4",[m
+[32m+[m[32m            "@protobufjs/eventemitter": "^1.1.0",[m
+[32m+[m[32m            "@protobufjs/fetch": "^1.1.0",[m
+[32m+[m[32m            "@protobufjs/float": "^1.0.2",[m
+[32m+[m[32m            "@protobufjs/inquire": "^1.1.0",[m
+[32m+[m[32m            "@protobufjs/path": "^1.1.2",[m
+[32m+[m[32m            "@protobufjs/pool": "^1.1.0",[m
+[32m+[m[32m            "@protobufjs/utf8": "^1.1.0",[m
+[32m+[m[32m            "@types/long": "^4.0.1",[m
+[32m+[m[32m            "@types/node": ">=13.7.0",[m
+[32m+[m[32m            "long": "^4.0.0"[m
+[32m+[m[32m          }[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "@humanwhocodes/config-array": {[m
+       "version": "0.10.7",[m
+       "resolved": "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.10.7.tgz",[m
+[36m@@ -2075,6 +2738,60 @@[m
+       "resolved": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz",[m
+       "integrity": "sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw=="[m
+     },[m
+[32m+[m[32m    "@protobufjs/aspromise": {[m
+[32m+[m[32m      "version": "1.1.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/aspromise/-/aspromise-1.1.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/base64": {[m
+[32m+[m[32m      "version": "1.1.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/base64/-/base64-1.1.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-AZkcAA5vnN/v4PDqKyMR5lx7hZttPDgClv83E//FMNhR2TMcLUhfRUBHCmSl0oi9zMgDDqRUJkSxO3wm85+XLg=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/codegen": {[m
+[32m+[m[32m      "version": "2.0.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/codegen/-/codegen-2.0.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-YyFaikqM5sH0ziFZCN3xDC7zeGaB/d0IUb9CATugHWbd1FRFwWwt4ld4OYMPWu5a3Xe01mGAULCdqhMlPl29Jg=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/eventemitter": {[m
+[32m+[m[32m      "version": "1.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/eventemitter/-/eventemitter-1.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-j9ednRT81vYJ9OfVuXG6ERSTdEL1xVsNgqpkxMsbIabzSo3goCjDIveeGv5d03om39ML71RdmrGNjG5SReBP/Q=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/fetch": {[m
+[32m+[m[32m      "version": "1.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/fetch/-/fetch-1.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-lljVXpqXebpsijW71PZaCYeIcE5on1w5DlQy5WH6GLbFryLUrBD4932W/E2BSpfRJWseIL4v/KPgBFxDOIdKpQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@protobufjs/aspromise": "^1.1.1",[m
+[32m+[m[32m        "@protobufjs/inquire": "^1.1.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/float": {[m
+[32m+[m[32m      "version": "1.0.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/float/-/float-1.0.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Ddb+kVXlXst9d+R9PfTIxh1EdNkgoRe5tOX6t01f1lYWOvJnSPDBlG241QLzcyPdoNTsblLUdujGSE4RzrTZGQ=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/inquire": {[m
+[32m+[m[32m      "version": "1.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/inquire/-/inquire-1.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-kdSefcPdruJiFMVSbn801t4vFK7KB/5gd2fYvrxhuJYg8ILrmn9SKSX2tZdV6V+ksulWqS7aXjBcRXl3wHoD9Q=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/path": {[m
+[32m+[m[32m      "version": "1.1.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/path/-/path-1.1.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-6JOcJ5Tm08dOHAbdR3GrvP+yUUfkjG5ePsHYczMFLq3ZmMkAD98cDgcT2iA1lJ9NVwFd4tH/iSSoe44YWkltEA=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/pool": {[m
+[32m+[m[32m      "version": "1.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/pool/-/pool-1.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-0kELaGSIDBKvcgS4zkjz1PeddatrjYcmMWOlAuAPwAeccUrPHdUqo/J6LiymHHEiJT5NrF1UVwxY14f+fy4WQw=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "@protobufjs/utf8": {[m
+[32m+[m[32m      "version": "1.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@protobufjs/utf8/-/utf8-1.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw=="[m
+[32m+[m[32m    },[m
+     "@react-aria/ssr": {[m
+       "version": "3.3.0",[m
+       "resolved": "https://registry.npmjs.org/@react-aria/ssr/-/ssr-3.3.0.tgz",[m
+[36m@@ -2815,6 +3532,11 @@[m
+       "resolved": "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz",[m
+       "integrity": "sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ=="[m
+     },[m
+[32m+[m[32m    "@types/long": {[m
+[32m+[m[32m      "version": "4.0.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/long/-/long-4.0.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-MqTGEo5bj5t157U6fA/BiDynNkn0YknVdh48CMPkTSpFTVmvao5UQmm7uEF6xBEo7qIMAlY/JSleYaE6VOdpaA=="[m
+[32m+[m[32m    },[m
+     "@types/mime": {[m
+       "version": "3.0.1",[m
+       "resolved": "https://registry.npmjs.org/@types/mime/-/mime-3.0.1.tgz",[m
+[36m@@ -5726,6 +6448,39 @@[m
+         "path-exists": "^4.0.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "firebase": {[m
+[32m+[m[32m      "version": "9.12.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/firebase/-/firebase-9.12.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-sBp4rvkCC7TUnGeneRNs6GVcajO+iSXmYjxqXN4FsrBzldJ5/AOnDXf4bi9OUZtQSl+EHDgUWShBieht15ijgQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@firebase/analytics": "0.8.3",[m
+[32m+[m[32m        "@firebase/analytics-compat": "0.1.16",[m
+[32m+[m[32m        "@firebase/app": "0.8.2",[m
+[32m+[m[32m        "@firebase/app-check": "0.5.15",[m
+[32m+[m[32m        "@firebase/app-check-compat": "0.2.15",[m
+[32m+[m[32m        "@firebase/app-compat": "0.1.37",[m
+[32m+[m[32m        "@firebase/app-types": "0.8.0",[m
+[32m+[m[32m        "@firebase/auth": "0.20.10",[m
+[32m+[m[32m        "@firebase/auth-compat": "0.2.23",[m
+[32m+[m[32m        "@firebase/database": "0.13.9",[m
+[32m+[m[32m        "@firebase/database-compat": "0.2.9",[m
+[32m+[m[32m        "@firebase/firestore": "3.7.1",[m
+[32m+[m[32m        "@firebase/firestore-compat": "0.2.1",[m
+[32m+[m[32m        "@firebase/functions": "0.8.7",[m
+[32m+[m[32m        "@firebase/functions-compat": "0.2.7",[m
+[32m+[m[32m        "@firebase/installations": "0.5.15",[m
+[32m+[m[32m        "@firebase/installations-compat": "0.1.15",[m
+[32m+[m[32m        "@firebase/messaging": "0.9.19",[m
+[32m+[m[32m        "@firebase/messaging-compat": "0.1.19",[m
+[32m+[m[32m        "@firebase/performance": "0.5.15",[m
+[32m+[m[32m        "@firebase/performance-compat": "0.1.15",[m
+[32m+[m[32m        "@firebase/remote-config": "0.3.14",[m
+[32m+[m[32m        "@firebase/remote-config-compat": "0.1.15",[m
+[32m+[m[32m        "@firebase/storage": "0.9.12",[m
+[32m+[m[32m        "@firebase/storage-compat": "0.1.20",[m
+[32m+[m[32m        "@firebase/util": "1.7.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "flat-cache": {[m
+       "version": "3.0.4",[m
+       "resolved": "https://registry.npmjs.org/flat-cache/-/flat-cache-3.0.4.tgz",[m
+[36m@@ -6333,6 +7088,11 @@[m
+       "resolved": "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz",[m
+       "integrity": "sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ=="[m
+     },[m
+[32m+[m[32m    "immediate": {[m
+[32m+[m[32m      "version": "3.0.6",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/immediate/-/immediate-3.0.6.tgz",[m
+[32m+[m[32m      "integrity": "sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ=="[m
+[32m+[m[32m    },[m
+     "immer": {[m
+       "version": "9.0.15",[m
+       "resolved": "https://registry.npmjs.org/immer/-/immer-9.0.15.tgz",[m
+[36m@@ -8216,6 +8976,38 @@[m
+         "object.assign": "^4.1.3"[m
+       }[m
+     },[m
+[32m+[m[32m    "jszip": {[m
+[32m+[m[32m      "version": "3.10.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/jszip/-/jszip-3.10.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-xXDvecyTpGLrqFrvkrUSoxxfJI5AH7U8zxxtVclpsUtMCq4JQ290LY8AW5c7Ggnr/Y/oK+bQMbqK2qmtk3pN4g==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "lie": "~3.3.0",[m
+[32m+[m[32m        "pako": "~1.0.2",[m
+[32m+[m[32m        "readable-stream": "~2.3.6",[m
+[32m+[m[32m        "setimmediate": "^1.0.5"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "readable-stream": {[m
+[32m+[m[32m          "version": "2.3.7",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.7.tgz",[m
+[32m+[m[32m          "integrity": "sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==",[m
+[32m+[m[32m          "requires": {[m
+[32m+[m[32m            "core-util-is": "~1.0.0",[m
+[32m+[m[32m            "inherits": "~2.0.3",[m
+[32m+[m[32m            "isarray": "~1.0.0",[m
+[32m+[m[32m            "process-nextick-args": "~2.0.0",[m
+[32m+[m[32m            "safe-buffer": "~5.1.1",[m
+[32m+[m[32m            "string_decoder": "~1.1.1",[m
+[32m+[m[32m            "util-deprecate": "~1.0.1"[m
+[32m+[m[32m          }[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "safe-buffer": {[m
+[32m+[m[32m          "version": "5.1.2",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",[m
+[32m+[m[32m          "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "kind-of": {[m
+       "version": "6.0.3",[m
+       "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz",[m
+[36m@@ -8258,6 +9050,14 @@[m
+         "type-check": "~0.4.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "lie": {[m
+[32m+[m[32m      "version": "3.3.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lie/-/lie-3.3.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "immediate": "~3.0.5"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "lilconfig": {[m
+       "version": "2.0.6",[m
+       "resolved": "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.6.tgz",[m
+[36m@@ -8296,6 +9096,11 @@[m
+       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",[m
+       "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="[m
+     },[m
+[32m+[m[32m    "lodash.camelcase": {[m
+[32m+[m[32m      "version": "4.3.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA=="[m
+[32m+[m[32m    },[m
+     "lodash.debounce": {[m
+       "version": "4.0.8",[m
+       "resolved": "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz",[m
+[36m@@ -8321,6 +9126,11 @@[m
+       "resolved": "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz",[m
+       "integrity": "sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ=="[m
+     },[m
+[32m+[m[32m    "long": {[m
+[32m+[m[32m      "version": "4.0.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/long/-/long-4.0.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA=="[m
+[32m+[m[32m    },[m
+     "loose-envify": {[m
+       "version": "1.4.0",[m
+       "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",[m
+[36m@@ -8584,6 +9394,35 @@[m
+         }[m
+       }[m
+     },[m
+[32m+[m[32m    "node-fetch": {[m
+[32m+[m[32m      "version": "2.6.7",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.7.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "whatwg-url": "^5.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "tr46": {[m
+[32m+[m[32m          "version": "0.0.3",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz",[m
+[32m+[m[32m          "integrity": "sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw=="[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "webidl-conversions": {[m
+[32m+[m[32m          "version": "3.0.1",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz",[m
+[32m+[m[32m          "integrity": "sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ=="[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "whatwg-url": {[m
+[32m+[m[32m          "version": "5.0.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==",[m
+[32m+[m[32m          "requires": {[m
+[32m+[m[32m            "tr46": "~0.0.3",[m
+[32m+[m[32m            "webidl-conversions": "^3.0.0"[m
+[32m+[m[32m          }[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node-forge": {[m
+       "version": "1.3.1",[m
+       "resolved": "https://registry.npmjs.org/node-forge/-/node-forge-1.3.1.tgz",[m
+[36m@@ -8803,6 +9642,11 @@[m
+       "resolved": "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz",[m
+       "integrity": "sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ=="[m
+     },[m
+[32m+[m[32m    "pako": {[m
+[32m+[m[32m      "version": "1.0.11",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz",[m
+[32m+[m[32m      "integrity": "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw=="[m
+[32m+[m[32m    },[m
+     "param-case": {[m
+       "version": "3.0.4",[m
+       "resolved": "https://registry.npmjs.org/param-case/-/param-case-3.0.4.tgz",[m
+[36m@@ -9775,6 +10619,32 @@[m
+         "warning": "^4.0.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "protobufjs": {[m
+[32m+[m[32m      "version": "7.1.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/protobufjs/-/protobufjs-7.1.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-4ZPTPkXCdel3+L81yw3dG6+Kq3umdWKh7Dc7GW/CpNk4SX3hK58iPCWeCyhVTDrbkNeKrYNZ7EojM5WDaEWTLQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@protobufjs/aspromise": "^1.1.2",[m
+[32m+[m[32m        "@protobufjs/base64": "^1.1.2",[m
+[32m+[m[32m        "@protobufjs/codegen": "^2.0.4",[m
+[32m+[m[32m        "@protobufjs/eventemitter": "^1.1.0",[m
+[32m+[m[32m        "@protobufjs/fetch": "^1.1.0",[m
+[32m+[m[32m        "@protobufjs/float": "^1.0.2",[m
+[32m+[m[32m        "@protobufjs/inquire": "^1.1.0",[m
+[32m+[m[32m        "@protobufjs/path": "^1.1.2",[m
+[32m+[m[32m        "@protobufjs/pool": "^1.1.0",[m
+[32m+[m[32m        "@protobufjs/utf8": "^1.1.0",[m
+[32m+[m[32m        "@types/node": ">=13.7.0",[m
+[32m+[m[32m        "long": "^5.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "long": {[m
+[32m+[m[32m          "version": "5.2.0",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/long/-/long-5.2.0.tgz",[m
+[32m+[m[32m          "integrity": "sha512-9RTUNjK60eJbx3uz+TEGF7fUr29ZDxR5QzXcyDpeSfeH28S9ycINflOgOlppit5U+4kNTe83KQnMEerw7GmE8w=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "proxy-addr": {[m
+       "version": "2.0.7",[m
+       "resolved": "https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.7.tgz",[m
+[36m@@ -10008,6 +10878,11 @@[m
+       "resolved": "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz",[m
+       "integrity": "sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg=="[m
+     },[m
+[32m+[m[32m    "react-firebase-hooks": {[m
+[32m+[m[32m      "version": "5.0.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-firebase-hooks/-/react-firebase-hooks-5.0.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-0+V2XwInZJNjW8B2cm+U21Hlv4xnp/1tJqIoDg2rjyWzKTQ9VoLPQ9PAt+fMqPumjLz5uCIREY7YqGSSjc439Q=="[m
+[32m+[m[32m    },[m
+     "react-is": {[m
+       "version": "16.13.1",[m
+       "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz",[m
+[36m@@ -10538,6 +11413,16 @@[m
+       "resolved": "https://registry.npmjs.org/select-hose/-/select-hose-2.0.0.tgz",[m
+       "integrity": "sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg=="[m
+     },[m
+[32m+[m[32m    "selenium-webdriver": {[m
+[32m+[m[32m      "version": "4.1.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-4.1.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-e4Ap8vQvhipgBB8Ry9zBiKGkU6kHKyNnWiavGGLKkrdW81Zv7NVMtFOL/j3yX0G8QScM7XIXijKssNd4EUxSOw==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "jszip": "^3.6.0",[m
+[32m+[m[32m        "tmp": "^0.2.1",[m
+[32m+[m[32m        "ws": ">=7.4.6"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "selfsigned": {[m
+       "version": "2.1.1",[m
+       "resolved": "https://registry.npmjs.org/selfsigned/-/selfsigned-2.1.1.tgz",[m
+[36m@@ -10675,6 +11560,11 @@[m
+         "send": "0.18.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "setimmediate": {[m
+[32m+[m[32m      "version": "1.0.5",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz",[m
+[32m+[m[32m      "integrity": "sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA=="[m
+[32m+[m[32m    },[m
+     "setprototypeof": {[m
+       "version": "1.2.0",[m
+       "resolved": "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.2.0.tgz",[m
+[36m@@ -11185,6 +12075,14 @@[m
+       "resolved": "https://registry.npmjs.org/thunky/-/thunky-1.1.0.tgz",[m
+       "integrity": "sha512-eHY7nBftgThBqOyHGVN+l8gF0BucP09fMo0oO/Lb0w1OF80dJv+lDVpXG60WMQvkcxAkNybKsrEIE3ZtKGmPrA=="[m
+     },[m
+[32m+[m[32m    "tmp": {[m
+[32m+[m[32m      "version": "0.2.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/tmp/-/tmp-0.2.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-76SUhtfqR2Ijn+xllcI5P1oyannHNHByD80W1q447gU3mp9G9PSpGdWmjUOHRDPiHYacIk66W7ubDTuPF3BEtQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "rimraf": "^3.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "tmpl": {[m
+       "version": "1.0.5",[m
+       "resolved": "https://registry.npmjs.org/tmpl/-/tmpl-1.0.5.tgz",[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex 9c42d6b..670a6da 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -7,9 +7,11 @@[m
+     "@testing-library/react": "^13.4.0",[m
+     "@testing-library/user-event": "^13.5.0",[m
+     "bootstrap": "^5.2.2",[m
+[32m+[m[32m    "firebase": "^9.12.1",[m
+     "react": "^18.2.0",[m
+     "react-bootstrap": "^2.5.0",[m
+     "react-dom": "^18.2.0",[m
+[32m+[m[32m    "react-firebase-hooks": "^5.0.3",[m
+     "react-router-dom": "^6.4.2",[m
+     "react-scripts": "5.0.1",[m
+     "web-vitals": "^2.1.4"[m
+[1mdiff --git a/src/App.js b/src/App.js[m
+[1mindex c3f9931..820b233 100644[m
+[1m--- a/src/App.js[m
+[1m+++ b/src/App.js[m
+[36m@@ -1,13 +1,17 @@[m
+ import './App.css';[m
+ import NavigationBar from './components/navbar/NavigationBar';[m
+ import 'bootstrap/dist/css/bootstrap.min.css';[m
+[32m+[m[32mimport { BrowserRouter } from 'react-router-dom';[m
+ [m
+ function App() {[m
+   return ([m
+     <><div>[m
+[31m-      <NavigationBar/>[m
+[32m+[m[32m      <BrowserRouter>[m
+[32m+[m[32m        <NavigationBar />[m
+[32m+[m[32m      </BrowserRouter>[m
+[32m+[m
+     </div>[m
+[31m-      </>[m
+[32m+[m[32m    </>[m
+   );[m
+ }[m
+ [m
+[1mdiff --git a/src/components/common/LoginModal.css b/src/components/common/LoginModal.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..03aa960[m
+[1m--- /dev/null[m
+[1m+++ b/src/components/common/LoginModal.css[m
+[36m@@ -0,0 +1,52 @@[m
+[32m+[m[32mbody {[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',[m
+[32m+[m[32m      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',[m
+[32m+[m[32m      sans-serif;[m
+[32m+[m[32m    -webkit-font-smoothing: antialiased;[m
+[32m+[m[32m    -moz-osx-font-smoothing: grayscale;[m
+[32m+[m[32m  }[m
+[32m+[m[41m  [m
+[32m+[m[32m  code {[m
+[32m+[m[32m    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',[m
+[32m+[m[32m      monospace;[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  .register {[m
+[32m+[m[32m    height: 100vh;[m
+[32m+[m[32m    width: 100vw;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m  }[m
+[32m+[m[41m  [m
+[32m+[m[32m  .register__container {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    background-color: #dcdcdc;[m
+[32m+[m[32m    padding: 30px;[m
+[32m+[m[32m  }[m
+[32m+[m[41m  [m
+[32m+[m[32m  .register__textBox {[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    font-size: 18px;[m
+[32m+[m[32m    margin-bottom: 10px;[m
+[32m+[m[32m  }[m
+[32m+[m[41m  [m
+[32m+[m[32m  .register__btn {[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    font-size: 18px;[m
+[32m+[m[32m    margin-bottom: 10px;[m
+[32m+[m[32m    border: none;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m    background-color: black;[m
+[32m+[m[32m  }[m
+[32m+[m[41m  [m
+[32m+[m[32m  .register__google {[m
+[32m+[m[32m    background-color: #4285f4;[m
+[32m+[m[32m  }[m
+[32m+[m[41m  [m
+[32m+[m[32m  .register div {[m
+[32m+[m[32m    margin-top: 7px;[m
+[32m+[m[32m  }[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/common/LoginModal.js b/src/components/common/LoginModal.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..815dacf[m
+[1m--- /dev/null[m
+[1m+++ b/src/components/common/LoginModal.js[m
+[36m@@ -0,0 +1,89 @@[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport React, { useState, useEffect } from 'react';[m
+[32m+[m[32mimport {[m
+[32m+[m[32m    useNavigate[m
+[32m+[m[32m} from "react-router-dom";[m
+[32m+[m[32mimport { auth, logInWithEmailAndPassword, signInWithGoogle, db } from "../navbar/service/firebase";[m
+[32m+[m[32mimport { useAuthState } from "react-firebase-hooks/auth";[m
+[32m+[m[32mimport Toast from 'react-bootstrap/Toast';[m
+[32m+[m[32mimport './LoginModal.css';[m
+[32m+[m[32mimport Modal from 'react-bootstrap/Modal';[m
+[32m+[m
+[32m+[m[32mfunction ToastMessageNotification({show,setShow, message}) {[m
+[32m+[m[32m    return ([m
+[32m+[m[32m      <Toast show={show} delay={3000} autohide onClose={() => setShow(false)}>[m
+[32m+[m[32m        <Toast.Body>{message}</Toast.Body>[m
+[32m+[m[32m      </Toast>[m
+[32m+[m[32m    );[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfunction LoginModal({show,setShow}) {[m
+[32m+[m[32m    const [toastShow, setToastShow] = useState(false);[m
+[32m+[m[32m    const [toastMessage, setToastMessage] = useState("");[m
+[32m+[m[32m    const [email, setEmail] = useState("");[m
+[32m+[m[32m    const [password, setPassword] = useState("");[m
+[32m+[m[32m    const [user, loading, error] = useAuthState(auth);[m
+[32m+[m[32m    const navigate = useNavigate();[m
+[32m+[m
+[32m+[m[32m    function triggerLogin() {[m
+[32m+[m[32m        logInWithEmailAndPassword(email, password).then((resp) => {[m
+[32m+[m[32m            setToastShow(true)[m
+[32m+[m[32m            setToastMessage(resp)[m[41m [m
+[32m+[m[32m            // setTimeout(()=>{[m
+[32m+[m[32m            //     setToastShow(false)[m
+[32m+[m[32m            // }, 5000)[m
+[32m+[m[32m        })[m
+[32m+[m[32m    }[m
+[32m+[m[32m    useEffect(() => {[m
+[32m+[m[32m        if (loading) {[m
+[32m+[m[32m            return;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        if (user) {[m
+[32m+[m[32m            navigate("/");[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }, [user, loading]);[m
+[32m+[m[32m    return ([m
+[32m+[m[32m        <>[m
+[32m+[m[32m            <Modal show={show} onHide={setShow}>[m
+[32m+[m[32m                <Modal.Header closeButton>[m
+[32m+[m[32m                    <Modal.Title>Login</Modal.Title>[m
+[32m+[m[32m                </Modal.Header>[m
+[32m+[m[32m                <Modal.Body>[m
+[32m+[m[32m                    <div className="login__container">[m
+[32m+[m[32m                        <input[m
+[32m+[m[32m                            type="text"[m
+[32m+[m[32m                            className="login__textBox"[m
+[32m+[m[32m                            value={email}[m
+[32m+[m[32m                            onChange={(e) => setEmail(e.target.value)}[m
+[32m+[m[32m                            placeholder="E-mail Address"[m
+[32m+[m[32m                        />[m
+[32m+[m[32m                        <input[m
+[32m+[m[32m                            type="password"[m
+[32m+[m[32m                            className="login__textBox"[m
+[32m+[m[32m                            value={password}[m
+[32m+[m[32m                            onChange={(e) => setPassword(e.target.value)}[m
+[32m+[m[32m                            placeholder="Password"[m
+[32m+[m[32m                        />[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                    <ToastMessageNotification show={toastShow} setShow={(bool) => setToastShow(bool)} message = {toastMessage}/>[m
+[32m+[m[32m                </Modal.Body>[m
+[32m+[m[32m                <Modal.Footer>[m
+[32m+[m[32m                    <button[m
+[32m+[m[32m                        className="login__btn"[m
+[32m+[m[32m                        onClick={triggerLogin}[m
+[32m+[m[32m                    >[m
+[32m+[m[32m                        Login[m
+[32m+[m[32m                    </button>[m
+[32m+[m[32m                    <button className="login__btn login__google" onClick={signInWithGoogle}>[m
+[32m+[m[32m                        Login with Google[m
+[32m+[m[32m                    </button>[m
+[32m+[m[32m                </Modal.Footer>[m
+[32m+[m[32m            </Modal>[m
+[32m+[m[41m           [m
+[32m+[m[32m        </>[m
+[32m+[m[32m    );[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mexport default LoginModal;[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/common/RegisterModal.js b/src/components/common/RegisterModal.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8d6b486[m
+[1m--- /dev/null[m
+[1m+++ b/src/components/common/RegisterModal.js[m
+[36m@@ -0,0 +1,80 @@[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport React, { useState, useEffect } from 'react';[m
+[32m+[m[32mimport {[m
+[32m+[m[32m    useNavigate[m
+[32m+[m[32m} from "react-router-dom";[m
+[32m+[m[32mimport { auth, registerWithEmailAndPassword, signInWithGoogle } from "../navbar/service/firebase";[m
+[32m+[m[32mimport { useAuthState } from "react-firebase-hooks/auth";[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport './LoginModal.css';[m
+[32m+[m[32mimport Modal from 'react-bootstrap/Modal';[m
+[32m+[m[32mfunction RegisterModal({ show, setShow2 }) {[m
+[32m+[m[32m    const [email, setEmail] = useState("");[m
+[32m+[m[32m    const [password, setPassword] = useState("");[m
+[32m+[m[32m    const [user, loading, error] = useAuthState(auth);[m
+[32m+[m[32m    const [name, setName] = useState("");[m
+[32m+[m[32m    const navigate = useNavigate();[m
+[32m+[m[32m    const register = () => {[m
+[32m+[m[32m        if (!name) alert("Please enter name");[m
+[32m+[m[32m        registerWithEmailAndPassword(name, email, password);[m
+[32m+[m[32m      };[m
+[32m+[m
+[32m+[m[32m    useEffect(() => {[m
+[32m+[m[32m        if (loading) {[m
+[32m+[m[32m            console.log(user)[m
+[32m+[m[32m            return;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        if (user) {[m
+[32m+[m[32m            navigate("/");[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }, [user, loading]);[m
+[32m+[m[32m    return ([m
+[32m+[m[32m        <>[m
+[32m+[m[32m            <Modal show={show} onHide={setShow2}>[m
+[32m+[m[32m                <Modal.Header closeButton>[m
+[32m+[m[32m                    <Modal.Title>Register</Modal.Title>[m
+[32m+[m[32m                </Modal.Header>[m
+[32m+[m[32m                <Modal.Body>[m
+[32m+[m[32m                    <div className="register__container">[m
+[32m+[m[32m                        <input[m
+[32m+[m[32m                            type="text"[m
+[32m+[m[32m                            className="register__textBox"[m
+[32m+[m[32m                            value={name}[m
+[32m+[m[32m                            onChange={(e) => setName(e.target.value)}[m
+[32m+[m[32m                            placeholder="Full Name"[m
+[32m+[m[32m                        />[m
+[32m+[m[32m                        <input[m
+[32m+[m[32m                            type="text"[m
+[32m+[m[32m                            className="register__textBox"[m
+[32m+[m[32m                            value={email}[m
+[32m+[m[32m                            onChange={(e) => setEmail(e.target.value)}[m
+[32m+[m[32m                            placeholder="E-mail Address"[m
+[32m+[m[32m                        />[m
+[32m+[m[32m                        <input[m
+[32m+[m[32m                            type="password"[m
+[32m+[m[32m                            className="register__textBox"[m
+[32m+[m[32m                            value={password}[m
+[32m+[m[32m                            onChange={(e) => setPassword(e.target.value)}[m
+[32m+[m[32m                            placeholder="Password"[m
+[32m+[m[32m                        />[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                </Modal.Body>[m
+[32m+[m[32m                <Modal.Footer>[m
+[32m+[m[32m                    <button className="register__btn" onClick={register}>[m
+[32m+[m[32m                        Register[m
+[32m+[m[32m                    </button>[m
+[32m+[m[32m                    <button[m
+[32m+[m[32m                        className="register__btn register__google"[m
+[32m+[m[32m                        onClick={signInWithGoogle}[m
+[32m+[m[32m                    >[m
+[32m+[m[32m                        Register with Google[m
+[32m+[m[32m                    </button>[m
+[32m+[m[32m                </Modal.Footer>[m
+[32m+[m[32m            </Modal>[m
+[32m+[m[32m        </>[m
+[32m+[m[32m    );[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mexport default RegisterModal;[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/navbar/NavigationBar.css b/src/components/navbar/NavigationBar.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/src/components/navbar/NavigationBar.js b/src/components/navbar/NavigationBar.js[m
+[1mindex 695437e..b67f307 100644[m
+[1m--- a/src/components/navbar/NavigationBar.js[m
+[1m+++ b/src/components/navbar/NavigationBar.js[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-import React from 'react';[m
+[32m+[m[32mimport React, { useState, useEffect } from 'react';[m
+ import Container from 'react-bootstrap/Container';[m
+ import Nav from 'react-bootstrap/Nav';[m
+ import Navbar from 'react-bootstrap/Navbar';[m
+[36m@@ -6,37 +6,124 @@[m [mimport {[m
+     BrowserRouter as Router,[m
+     Routes,[m
+     Route,[m
+[31m-    Link[m
+[31m-  } from "react-router-dom";[m
+[32m+[m[32m    Link,[m
+[32m+[m[32m    useNavigate[m
+[32m+[m[32m} from "react-router-dom";[m
+[32m+[m[32mimport { auth, logInWithEmailAndPassword, signInWithGoogle, logout, db } from "./service/firebase";[m
+[32m+[m[32mimport { useAuthState } from "react-firebase-hooks/auth";[m
+[32m+[m[32mimport { query, collection, getDocs, where } from "firebase/firestore";[m
+[32m+[m
+ import Home from '../home/Home'[m
+ import Academics from '../academics/Academics'[m
+[31m-import Admission from '../admission/Admission';[m
+[32m+[m[32mimport Admission from '../admission/Admission'[m
+[32m+[m[32mimport LoginModal from '../common/LoginModal'[m
+[32m+[m[32mimport './NavigationBar.css';[m
+[32m+[m[32mimport RegisterModal from '../common/RegisterModal';[m
+ [m
+ function NavigationBar() {[m
+[32m+[m[32m    const [email, setEmail] = useState("");[m
+[32m+[m[32m    const [password, setPassword] = useState("");[m
+[32m+[m[32m    const [user, loading, error] = useAuthState(auth);[m
+[32m+[m[32m    const [name, setName] = useState("");[m
+[32m+[m[32m    const [show2, setShow2] = useState(false);[m
+[32m+[m[32m    const [show, setShow] = useState(false);[m
+[32m+[m[32m    const navigate = useNavigate();[m
+[32m+[m[32m    var title[m
+[32m+[m[32m    const fetchUserName = async () => {[m
+[32m+[m[32m        try {[m
+[32m+[m[32m            const q = query(collection(db, "users"), where("uid", "==", user?.uid));[m
+[32m+[m[32m            const doc = await getDocs(q);[m
+[32m+[m[32m            const data = doc.docs[0].data();[m
+[32m+[m[32m            setName(data.name);[m
+[32m+[m[32m        } catch (err) {[m
+[32m+[m[32m            console.error(err);[m
+[32m+[m[32m            alert("An error occured while fetching user data");[m
+[32m+[m[32m        }[m
+[32m+[m[32m    };[m
+[32m+[m
+[32m+[m[32m    function showModal(event){[m
+[32m+[m[32m        console.log(event.currentTarget.id)[m
+[32m+[m[41m        [m
+[32m+[m[32m        if (event.currentTarget.id === "loginButton"){[m
+[32m+[m[32m            setShow(true)[m
+[32m+[m[32m            setShow2(false)[m
+[32m+[m[32m        } else if (event.currentTarget.id === "registerButton") {[m
+[32m+[m[32m            setShow2(true)[m
+[32m+[m[32m            setShow(false)[m
+[32m+[m[32m        }[m
+[32m+[m[41m        [m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    function signOut(event) {[m
+[32m+[m[32m        setShow2(false)[m
+[32m+[m[32m        setShow(false)[m
+[32m+[m[32m        logout()[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    useEffect(() => {[m
+[32m+[m[32m        if (loading) {[m
+[32m+[m[32m            // maybe trigger a loading screen[m
+[32m+[m[32m            return;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        if (user) {[m
+[32m+[m[32m            navigate("/");[m
+[32m+[m[32m            if (user.displayName !== null) {[m
+[32m+[m[32m                setName(user.displayName);[m
+[32m+[m[32m            } else {[m
+[32m+[m[32m                fetchUserName()[m
+[32m+[m[32m            }[m
+[32m+[m[41m            [m
+[32m+[m[41m            [m
+[32m+[m[32m        }[m
+[32m+[m[32m    }, [user, loading]);[m
+     return ([m
+         <>[m
+[31m-        <Router>[m
+             <Navbar bg="light" variant="light" expand="lg">[m
+                 <Container>[m
+                     <Navbar.Brand>NUS</Navbar.Brand>[m
+                     <Nav className="me-auto">[m
+[31m-                        <Nav.Link as={Link} to = {"/"}>Home</Nav.Link>[m
+[31m-                        <Nav.Link as={Link} to = {"/academics"}>Academics</Nav.Link>[m
+[31m-                        <Nav.Link as={Link} to = {"/admission"}>Admission</Nav.Link>[m
+[32m+[m[32m                        <Nav.Link as={Link} to={"/"}>Home</Nav.Link>[m
+[32m+[m[32m                        <Nav.Link as={Link} to={"/academics"}>Academics</Nav.Link>[m
+[32m+[m[32m                        <Nav.Link as={Link} to={"/admission"}>Admission</Nav.Link>[m
+                     </Nav>[m
+[32m+[m[32m                    <div className=''>[m
+[32m+[m[32m                        {!user ? ([m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <button onClick={showModal} id = "loginButton">[m
+[32m+[m[32m                                    Login[m
+[32m+[m[32m                                </button>[m
+[32m+[m[32m                                &nbsp;[m
+[32m+[m[32m                                &nbsp;[m
+[32m+[m[32m                                <button onClick={showModal} id = "registerButton">[m
+[32m+[m[32m                                    Register[m
+[32m+[m[32m                                </button>[m
+[32m+[m[32m                                <RegisterModal show={show2} setShow2={(bool) => setShow2(bool)}/>[m
+[32m+[m[32m                                <LoginModal show={show} setShow={(bool) => setShow(bool)}/>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        ) : ([m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                Welcome {name}[m
+[32m+[m[32m                                &nbsp;[m
+[32m+[m[32m                                &nbsp;[m
+[32m+[m[32m                                <button onClick={signOut}>[m
+[32m+[m[32m                                    Logout[m
+[32m+[m[32m                                </button>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        )}[m
+[32m+[m[32m                    </div>[m
+                 </Container>[m
+             </Navbar>[m
+             <Routes>[m
+[31m-                <Route path="/" element={<Home/>}>[m
+[32m+[m[32m                <Route path="/" element={<Home />}>[m
+                 </Route>[m
+[31m-                <Route path="/academics" element={<Academics/>}>[m
+[32m+[m[32m                <Route path="/academics" element={<Academics />}>[m
+                 </Route>[m
+[31m-                <Route path="/admission" element={<Admission/>}>[m
+[32m+[m[32m                <Route path="/admission" element={<Admission />}>[m
+                 </Route>[m
+             </Routes>[m
+[31m-        </Router>[m
+         </>[m
+     );[m
+[31m-  }[m
+[31m-  [m
+[31m-  export default NavigationBar;[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mexport default NavigationBar;[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/navbar/service/firebase.js b/src/components/navbar/service/firebase.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1fb3fe1[m
+[1m--- /dev/null[m
+[1m+++ b/src/components/navbar/service/firebase.js[m
+[36m@@ -0,0 +1,112 @@[m
+[32m+[m[32mimport { initializeApp } from "firebase/app";[m
+[32m+[m[32mimport {[m
+[32m+[m[32m  GoogleAuthProvider,[m
+[32m+[m[32m  getAuth,[m
+[32m+[m[32m  signInWithPopup,[m
+[32m+[m[32m  signInWithEmailAndPassword,[m
+[32m+[m[32m  createUserWithEmailAndPassword,[m
+[32m+[m[32m  sendPasswordResetEmail,[m
+[32m+[m[32m  signOut,[m
+[32m+[m[32m} from "firebase/auth";[m
+[32m+[m[32mimport {[m
+[32m+[m[32m  getFirestore,[m
+[32m+[m[32m  query,[m
+[32m+[m[32m  getDocs,[m
+[32m+[m[32m  collection,[m
+[32m+[m[32m  where,[m
+[32m+[m[32m  addDoc,[m
+[32m+[m[32m} from "firebase/firestore";[m
+[32m+[m
+[32m+[m[32mconst firebaseConfig = {[m
+[32m+[m[32m  apiKey: "AIzaSyASaAd3ksjs0kX4U2YGwCG0F5NuIP1_41U",[m
+[32m+[m[32m  authDomain: "is4301project-67245.firebaseapp.com",[m
+[32m+[m[32m  projectId: "is4301project-67245",[m
+[32m+[m[32m  storageBucket: "is4301project-67245.appspot.com",[m
+[32m+[m[32m  messagingSenderId: "118570780505",[m
+[32m+[m[32m  appId: "1:118570780505:web:71fbfa197a517c69e2ae48"[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst app = initializeApp(firebaseConfig);[m
+[32m+[m[32mconst auth = getAuth(app);[m
+[32m+[m[32mconst db = getFirestore(app);[m
+[32m+[m
+[32m+[m[32mconst googleProvider = new GoogleAuthProvider();[m
+[32m+[m
+[32m+[m[32mconst signInWithGoogle = async () => {[m
+[32m+[m[32m  try {[m
+[32m+[m[32m    console.log("signInWithGoogle")[m
+[32m+[m[32m    const res = await signInWithPopup(auth, googleProvider);[m
+[32m+[m[32m    const user = res.user;[m
+[32m+[m[32m    const q = query(collection(db, "users"), where("uid", "==", user.uid));[m
+[32m+[m[32m    const docs = await getDocs(q);[m
+[32m+[m[32m    if (docs.docs.length === 0) {[m
+[32m+[m[32m      console.log("signInWithGoogle")[m
+[32m+[m[32m      await addDoc(collection(db, "users"), {[m
+[32m+[m[32m        uid: user.uid,[m
+[32m+[m[32m        name: user.displayName,[m
+[32m+[m[32m        authProvider: "google",[m
+[32m+[m[32m        email: user.email,[m
+[32m+[m[32m      });[m
+[32m+[m[32m    }[m
+[32m+[m[32m  } catch (err) {[m
+[32m+[m[32m    console.error(err);[m
+[32m+[m[32m    alert(err.message);[m
+[32m+[m[32m  }[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst logInWithEmailAndPassword = async (email, password) => {[m
+[32m+[m[32m  try {[m
+[32m+[m[32m    await signInWithEmailAndPassword(auth, email, password);[m
+[32m+[m[32m  } catch (err) {[m
+[32m+[m[32m    console.error(err);[m
+[32m+[m[32m    var stringValue = JSON.stringify(err)[m
+[32m+[m[32m    var stringJson = JSON.parse(stringValue)[m
+[32m+[m[32m    if (stringJson.code === "auth/user-not-found"){[m
+[32m+[m[32m      return "Account does not exist. Please register an account"[m
+[32m+[m[32m    } else if (stringJson.code === "auth/wrong-password"){[m
+[32m+[m[32m      return "Invalid Password. Please reset your password if you forget."[m
+[32m+[m[32m    } else if (stringJson.code === "auth/invalid-email") {[m
+[32m+[m[32m      return "Invalid Email. Please double check."[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst registerWithEmailAndPassword = async (name, email, password) => {[m
+[32m+[m[32m  try {[m
+[32m+[m[32m    const res = await createUserWithEmailAndPassword(auth, email, password);[m
+[32m+[m[32m    const user = res.user;[m
+[32m+[m[32m    await addDoc(collection(db, "users"), {[m
+[32m+[m[32m      uid: user.uid,[m
+[32m+[m[32m      name,[m
+[32m+[m[32m      authProvider: "local",[m
+[32m+[m[32m      email,[m
+[32m+[m[32m    });[m
+[32m+[m[32m  } catch (err) {[m
+[32m+[m[32m    console.error(err);[m
+[32m+[m[32m    alert(err.message);[m
+[32m+[m[32m  }[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst sendPasswordReset = async (email) => {[m
+[32m+[m[32m  try {[m
+[32m+[m[32m    await sendPasswordResetEmail(auth, email);[m
+[32m+[m[32m    alert("Password reset link sent!");[m
+[32m+[m[32m  } catch (err) {[m
+[32m+[m[32m    console.error(err);[m
+[32m+[m[32m    alert(err.message);[m
+[32m+[m[32m  }[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst logout = () => {[m
+[32m+[m[32m  signOut(auth);[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mexport {[m
+[32m+[m[32m  auth,[m
+[32m+[m[32m  db,[m
+[32m+[m[32m  signInWithGoogle,[m
+[32m+[m[32m  logInWithEmailAndPassword,[m
+[32m+[m[32m  registerWithEmailAndPassword,[m
+[32m+[m[32m  sendPasswordReset,[m
+[32m+[m[32m  logout,[m
+[32m+[m[32m};[m
+\ No newline at end of file[m
